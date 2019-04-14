@@ -62,6 +62,7 @@ zsh_antigen_bundles:
   #- { name: zsh-users/zsh-syntax-highlighting, when: "{{ zsh_version | default(false) | version_compare('4.3.17', '>=') }}" }
   # bug with text paste in fast-syntax-highlighting v1.21, see https://github.com/zdharma/fast-syntax-highlighting/issues/30
   - { name: zdharma/fast-syntax-highlighting@v1.2, when: "{{ zsh_version | default(false) | version_compare('4.3.17', '>=') }}" }
+  - { name: zdharma/zsh-diff-so-fancy, command: git }
 
 zsh_antigen_bundles_extras: []
 
