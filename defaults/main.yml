@@ -58,21 +58,19 @@ zsh_antigen_bundles:
   - { name: unixorn/autoupdate-antigen.zshplugin, when: "{{ zsh_update_interval > 0 }}" }
   - urbainvaes/fzf-marks # replaces jump plugin, mark, jump and Ctrl+G
   - "{{ fzf_widgets }}"
-  # must be last, don't work on zsh < 4.3.17
-  #- { name: zsh-users/zsh-syntax-highlighting, when: "{{ zsh_version | default(false) | version_compare('4.3.17', '>=') }}" }
-  # bug with text paste in fast-syntax-highlighting v1.21, see https://github.com/zdharma/fast-syntax-highlighting/issues/30
   - { name: zdharma/fast-syntax-highlighting@v1.2, when: "{{ zsh_version | default(false) | version_compare('4.3.17', '>=') }}" }
   - { name: zdharma/zsh-diff-so-fancy, command: git }
 
 zsh_antigen_bundles_extras: []
 
-# useful for deploy many zsh users at host, without duplicate and without write access
+# Useful for deploying many zsh users at host without duplicates and without
+# write access
 zsh_shared: no
 
 zsh_antigen_theme: "bhilburn/powerlevel9k powerlevel9k"
 
 zsh_hotkeys:
-  # home & end keys work
+  # Ensure 'Home' & 'End' keys work
   - { hotkey: '\e[1~', action: beginning-of-line }
   - { hotkey: '\e[4~', action: end-of-line }
 
@@ -119,12 +117,12 @@ zsh_hotkeys:
 
 zsh_hotkeys_extras: []
 
-# only single quotes allowed in action
+# In this section in 'alias' and 'action' only single quotes are allowed as
+# outer delimiters
 zsh_aliases:
   - { alias: 'apt-update-list-upgrade', action: 'apt update && apt upgrade --dry-run | grep Inst | sort | fzf && apt upgrade' }
   - { alias: 'dfh',                     action: 'df -h | grep -v docker' }
   - { alias: 'ubuntu-release',          action: 'lsb_release -a' }
-  - { alias: '', action: '' }
 
 
 # zsh-autosuggestions
