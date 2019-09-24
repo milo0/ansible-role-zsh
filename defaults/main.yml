@@ -167,7 +167,7 @@ zsh_powerlevel9k_shorten_dir_length: 3
 zsh_powerlevel9k_status_verbose: 0
 
 # dir (context) colors
-zsh_powerlevel9k_dir_foreground: "green" # magenta
+zsh_powerlevel9k_dir_foreground: "green"
 zsh_powerlevel9k_dir_background: "none"
 zsh_powerlevel9k_context_default_foreground: "255" # white
 zsh_powerlevel9k_context_default_background: "024" # blue
