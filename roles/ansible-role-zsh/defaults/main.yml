@@ -54,12 +54,12 @@ zsh_antigen_bundles:
   - zsh_reload
 
   # on zsh 4.3.10 autosuggestions breaks multiline commands with \
-  - { name: zsh-users/zsh-autosuggestions, when: "{{ zsh_version | default(false) | version_compare('5.0', '>=') }}" }
+  - { name: zsh-users/zsh-autosuggestions, when: "{{ zsh_version | default(false) is version_compare('5.0', '>=') }}" }
   - popstas/zsh-command-time
   - { name: unixorn/autoupdate-antigen.zshplugin, when: "{{ zsh_update_interval > 0 }}" }
   - urbainvaes/fzf-marks # replaces jump plugin, mark, jump and Ctrl+G
   - "{{ fzf_widgets }}"
-  - { name: zdharma/fast-syntax-highlighting@v1.2, when: "{{ zsh_version | default(false) | version_compare('4.3.17', '>=') }}" }
+  - { name: zdharma/fast-syntax-highlighting@v1.2, when: "{{ zsh_version | default(false) is version_compare('4.3.17', '>=') }}" }
   - { name: zdharma/zsh-diff-so-fancy, command: git }
 
 zsh_antigen_bundles_extras: []
