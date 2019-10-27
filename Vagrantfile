@@ -6,6 +6,6 @@ Vagrant.configure('2') do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.extra_vars = { ansible_ssh_user: 'vagrant', vagrant: true, zsh_user: 'vagrant' }
     ansible.become = true
-    ansible.playbook = 'tests/vagrant.yml'
+    ansible.playbook = 'roles/ansible-role-zsh/tests/vagrant.yml'
   end
 end
