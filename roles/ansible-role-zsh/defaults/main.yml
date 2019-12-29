@@ -23,7 +23,7 @@ zsh_path:
 fzf_widgets: ytet5uy4/fzf-widgets
 
 zsh_antigen_version: master
-zsh_fzf_version: 0.18.0
+zsh_fzf_version: 0.20.0
 
 zsh_antigen_bundles:
   - { name: archlinux, command: pacman }
